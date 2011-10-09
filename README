@@ -9,10 +9,27 @@
 * add the xav theme to themes (theme heavily borrowed from @xshay)
 
 # installing emacs
-brew install emacs --cocoa --use-git-head --HEAD
+# brew install emacs --cocoa --use-git-head --HEAD # usually this works, but not in lion for some reason
+download the compiled version of emacs 24 from http://emacsformacosx.com/builds
+create the aliases to point to the emacs in /Applications (see zsh -> custom -> aliases)
+edit .emacs.d/init.el
+download solarized
+elpa's version of color-theme doesnt seem to work, so download color-theme from
+http://download.savannah.gnu.org/releases/color-theme/ to ~/.vim/ian
+create ~/.vim/ian directory
+move the solarized content to ~/.vim/ian as well
 
 # install vim (courtesy of rhnh.net)
 brew install --HEAD https://raw.github.com/adamv/homebrew-alt/master/duplicates/vim.rb
+install tpope's pathogen
+install solarized color theme
+move .vimrc
+
+install command-t by downloading the vba and sourcing it
+
+install r-plugin (http://www.vim.org/scripts/script.php?script_id=2628)
+the plugin requires ncruses-term, which you can obtain here:
+https://github.com/adamv/homebrew-alt/blob/master/duplicates/ncurses.rb
 
 # install tmux
 brew install tmux
