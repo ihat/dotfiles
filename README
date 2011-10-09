@@ -7,3 +7,13 @@
 * download oh-my-zsh
 * add the relevant custom files in .oh-my-zsh/custom
 * add the xav theme to themes (theme heavily borrowed from @xshay)
+
+# installing emacs
+brew install emacs --cocoa --use-git-head --HEAD
+
+# install vim (courtesy of rhnh.net)
+brew install --HEAD https://raw.github.com/adamv/homebrew-alt/master/duplicates/vim.rb
+
+# install tmux
+brew install tmux
+load .tmux.conf
