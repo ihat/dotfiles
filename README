@@ -1,4 +1,4 @@
-# instructions for installing zsh
+# installing zsh
 * brew install zsh
 * vi /etc/shells and add path to zsh
 * chsh -s $(which zsh)
@@ -19,7 +19,7 @@ http://download.savannah.gnu.org/releases/color-theme/ to ~/.vim/ian
 create ~/.vim/ian directory
 move the solarized content to ~/.vim/ian as well
 
-# install vim (courtesy of rhnh.net)
+# installing vim (courtesy of rhnh.net)
 brew install --HEAD https://raw.github.com/adamv/homebrew-alt/master/duplicates/vim.rb
 install tpope's pathogen
 install solarized color theme
@@ -31,6 +31,10 @@ install r-plugin (http://www.vim.org/scripts/script.php?script_id=2628)
 the plugin requires ncruses-term, which you can obtain here:
 https://github.com/adamv/homebrew-alt/blob/master/duplicates/ncurses.rb
 
-# install tmux
+# installing tmux
 brew install tmux
 load .tmux.conf
+
+# installing R
+download R from cran and install it
+load .Rprofile and .Rpackage

@@ -1,0 +1,10 @@
+list(
+  default = function(x) {
+    path = file.path("~/Development/rdev", x)
+  },
+
+  # devtools
+  "bench" = "~/Development/rdev/devtools/bench",
+  "profr" = "~/Development/rdev/devtools/profr",
+  "memoise" = "~/Development/rdev/devtools/memoise"
+)
