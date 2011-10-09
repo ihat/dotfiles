@@ -1,0 +1,9 @@
+# instructions for installing zsh
+* brew install zsh
+* vi /etc/shells and add path to zsh
+* chsh -s $(which zsh)
+
+# modifying zsh
+* download oh-my-zsh
+* add the relevant custom files in .oh-my-zsh/custom
+* add the xav theme to themes (theme heavily borrowed from @xshay)
