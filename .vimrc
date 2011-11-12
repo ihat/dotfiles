@@ -26,6 +26,7 @@ set showcmd
 set ic                                " Ignore case in search
 set nu                                " Always with the line numbers
 set hlsearch
+set bs=2
 :let g:netrw_browse_split = 3
 
 au BufRead,BufNewFile *.thrift set filetype=thrift
@@ -67,3 +68,4 @@ let mapleader = ";"
 map <leader>e :edit %%
 map <leader>v :view %%
 nnoremap <leader><leader> <c-^> " go to previous location
+map <leader>nt :NERDTree<CR>

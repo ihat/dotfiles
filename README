@@ -26,6 +26,7 @@ install solarized color theme
 move .vimrc
 
 install command-t by downloading the vba and sourcing it
+install nerdtree (via github)
 
 install r-plugin (http://www.vim.org/scripts/script.php?script_id=2628)
 the plugin requires ncruses-term, which you can obtain here:
