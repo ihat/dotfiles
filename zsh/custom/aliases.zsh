@@ -83,6 +83,7 @@ alias grim="git rebase --interactive master"
 alias gdb="git push -f origin HEAD:dogfood-build"
 alias gbr="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname)' | cut -d / -f 3-"
 alias grc="git rebase --continue"
+alias gl="git log --graph --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'"
 
 function gh {
 	if [ -n "$1" ]; then
