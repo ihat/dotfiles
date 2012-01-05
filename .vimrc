@@ -63,9 +63,31 @@ highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 autocm ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+\%#\@<!$/
 
+" Strip trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" my split windows will <3 you so much
+set colorcolumn=80
+" ... in case that's ugly with your setup you can change the color
+" highlight ColorColumn ctermbg=green guibg=orange
+
+" An alternative option (I don't use)
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
+
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 let mapleader = ";"
 map <leader>e :edit %%
 map <leader>v :view %%
 nnoremap <leader><leader> <c-^> " go to previous location
 map <leader>nt :NERDTree<CR>
+
+imap <Nul> <Esc>:w<CR>
+:set mouse=a
+
+" Underline when searching
+highlight Search cterm=underline
+
+" Commenting
+vmap o :s/^/# /<CR>
+vmap i :s/^# //<CR>
