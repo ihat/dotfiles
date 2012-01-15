@@ -91,3 +91,7 @@ highlight Search cterm=underline
 " Commenting
 vmap o :s/^/# /<CR>
 vmap i :s/^# //<CR>
+
+" Command-T
+let g:CommandTMaxHeight=20
+let g:NERDSpaceDelims=1
