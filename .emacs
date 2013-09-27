@@ -1,4 +1,6 @@
-(load "~/prismatic/config/emacs/prismatic") (load-theme 'tango-dark)
+(load "~/prismatic/config/emacs/prismatic")
+
+;; (load-theme 'tango-dark)
 
 ;; ihat's customizations
 (global-linum-mode t)
@@ -13,7 +15,8 @@
 ;; (require 'evil)
 ;; (evil-mode 1)
 ;; (set-default-font "Monaco 12")
-(set-default-font "Inconsolata-g 12")
+;; (set-default-font "Inconsolata-g 12")
+(set-default-font "Source Code Pro 12")
 
 ;; using highlight-symbol
 (global-set-key (kbd "<f3>") 'highlight-symbol-at-point)
@@ -143,11 +146,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
+ '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "617219c11282b84761477059b9339da78ce392c974d9308535ee4ec8c0770bee" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
  '(inhibit-startup-screen t)
  '(show-paren-mode t)
  '(speedbar-show-unknown-files t)
  '(tool-bar-mode nil))
+
+(require 'smooth-scrolling)
 
 ;;
 
@@ -168,6 +173,31 @@
 
 (require 'sws-mode)
 (require 'stylus-mode)
-(require 'jade-mode)    
+(require 'jade-mode)
 (add-to-list 'auto-mode-alist '("\\.styl$" . stylus-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+
+(add-to-list 'auto-mode-alist '("\\.cljx$" . clojure-mode))
+
+(setenv "JVM_OPTS" "-Xmx8g")
+
+(define-globalized-minor-mode
+  global-text-scale-mode
+  text-scale-mode
+  (lambda () (text-scale-mode 1)))
+
+(defun global-text-scale-adjust (inc) (interactive)
+  (text-scale-set 1)
+  (kill-local-variable 'text-scale-mode-amount)
+  (setq-default text-scale-mode-amount (+ text-scale-mode-amount inc))
+  (global-text-scale-mode 1))
+
+(global-set-key (kbd "M-+")
+                '(lambda () (interactive) (global-text-scale-adjust 1)))
+(global-set-key (kbd "M--")
+                '(lambda () (interactive) (global-text-scale-adjust -1)))
+
+(setq-default fill-column 95)
+
+(load-theme 'solarized-dark t)
+;; (load-theme 'solarized-light t)
